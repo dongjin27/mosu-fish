@@ -107,7 +107,10 @@ export default function Dashboard() {
         </div>
 
         {/* 최근 세션 */}
-        <h3 style={{color:c.t2,fontSize:11,fontWeight:500,letterSpacing:'.06em',textTransform:'uppercase',margin:'0 0 10px'}}>최근 세션</h3>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10}}>
+          <h3 style={{color:c.t2,fontSize:11,fontWeight:500,letterSpacing:".06em",textTransform:"uppercase",margin:0}}>최근 세션</h3>
+          <button onClick={()=>router.push("/charts")} style={{background:"linear-gradient(135deg,#1D9BF0,#00D4FF)",border:"none",borderRadius:20,padding:"5px 12px",color:"#fff",fontSize:11,fontWeight:600,cursor:"pointer"}}>📊 차트 보기</button>
+        </div>
         {sessions.length === 0 ? (
           <div style={{textAlign:'center',padding:'40px 0',color:c.t3}}>
             <div style={{fontSize:48,marginBottom:8}}>🏊</div>
